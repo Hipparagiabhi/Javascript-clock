@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container{
+        display: flex;
+        height:90vh;
+        justify-content: center;
+        align-items: center;
+        font-size: 90px;
+        
+    }
+    .demo{
+        border:2px solid black;
+        padding: 25px;
+        border-radius: 20px;
+        background: black;
+        color: rgb(33, 139, 226);
+
+    }
+</style>
+<body >
+    <div class="container">
+    <p class="demo" id="demo"></p>
+    </div>
+
+    <script>
+        window.onload=startTime;
+        function startTime(){
+        let today= new Date();
+         console.log(today);
+        let h = today.getHours();
+         let m = today.getMinutes();
+         let s = today.getSeconds();
+         let b=today.toLocaleString({hour12: true });
+
+
+
+         let z=b.slice(18,21)
+
+         console.log(z);
+
+         console.log( today.toLocaleString({hour12: true }));
+        
+        
+          document.getElementById("demo").innerHTML=h+":"+m+":"+s +" " +z;
+        //  let b=document.getElementById("demo").innerHTML=a.getHours() + ":" + a.getMinutes() + ":" + a.getSeconds();
+        setTimeout(startTime,1000);
+
+        // if(h>=24 && h<=12 ){
+
+        //     document.getElementById("demo").innerHTML=today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()+"am";
+
+        // }
+
+        // else if(h>=12 && h<=24 ){
+
+        // document.getElementById("demo").innerHTML=today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds()+"pm";
+
+        // }
+
+        
+            
+        }
+    
+        //  console.log(b);
+    
+        // function myfunction()
+
+        
+
+
+    
+    </script>
+</body>
+</html>
